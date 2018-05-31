@@ -8,12 +8,13 @@ include('PubMedCentralArticle.php');
 
 // FETCH BY "IDSearch" or "UserSearch"
 
-// PubMed Sample Article 29719135
+// PubMed Sample Article 27181790
 
 //PubMed Central Article 212403
 
 
-$article = new PubMedArticle("IDSearch", 27916205);
+$article = new PubMedArticle("IDSearch", 27181790);
+//echo json_encode($article -> BruteResult);
 //print_r($article->BruteResult);
 
 
