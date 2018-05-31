@@ -3,7 +3,7 @@
 class PubMedArticle extends DataFetch{
 
     var $SearchParameter;
-    var $BruteResult;
+//    var $BruteResult;
     var $ArticleTitle;
     var $ArticleID;
     var $Volume;
@@ -48,9 +48,10 @@ class PubMedArticle extends DataFetch{
         $article = $this::file_get_contents_curl('https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id='.$Parameter.'&retmode=xml');
 
 
-
+//        $article =  new SimpleXMLElement($article);
+        
         $article =  simplexml_load_string($article);    // CONVERT XML TO PHP READABLE XML
-        $this->BruteResult = $article;  // SAVE ALL INFORMATION TO BruteResult FOR LATER USE, IF ANY
+//        $this->BruteResult = $article;  // SAVE ALL INFORMATION TO BruteResult FOR LATER USE, IF ANY
 
         $this->GetAllData($article);
 
@@ -273,8 +274,7 @@ class PubMedArticle extends DataFetch{
         
 //        echo $this->AuthorsCount = count($input->AbstractText);
         foreach($input->AbstractText as $key => $value){
-            
-            echo $value. "<br>";
+          
             array_push($this->AbstractText, $value);
 
         }
