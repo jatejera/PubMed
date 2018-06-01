@@ -3,7 +3,7 @@
 class PubMedArticle extends DataFetch{
 
     var $SearchParameter;
-//    var $BruteResult;
+//    var $BruteData;
     var $ArticleTitle;
     var $ArticleID;
     var $Volume;
