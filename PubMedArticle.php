@@ -267,9 +267,6 @@ class PubMedArticle extends DataFetch{
     
     function GetAbstractText($input){
 
-
-//                $location = '/PubmedArticle/MedlineCitation/Article/Abstract'; $location = str_replace("/", "->", $location); echo $location;
-
         $input = $input ->PubmedArticle->MedlineCitation->Article->Abstract;
         
 //        echo $this->AuthorsCount = count($input->AbstractText);

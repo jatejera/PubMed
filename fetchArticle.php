@@ -15,11 +15,11 @@ include('PubMedCentralArticle.php');
 
 $article = new PubMedArticle("IDSearch", 27181790);
 
-//echo $some = html_entity_decode(json_encode($article, JSON_NUMERIC_CHECK));
 
+$arr = json_encode($article, true);
+echo $arr;
+//echo (json_encode($arr));
 
-$arr = json_decode(json_encode($article),true);
-echo (json_encode($arr));
 //print_r($article->BruteResult);
 
 
